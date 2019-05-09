@@ -19,7 +19,7 @@ const getWeather = (adress) => {
     messageInfo.textContent = 'loading...';
     messageError.textContent = '';
 
-    fetch(`http://localhost:3000/weather?adress=${adress}`).then((res) => {
+    fetch(`/weather?adress=${adress}`).then((res) => {
         res.json().then((data) => {
             if(data.error){
                 messageInfo.textContent = '';
